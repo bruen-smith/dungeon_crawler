@@ -4,6 +4,7 @@
  * Version: 1.2.1
  * IDE: CLion 2024.1.4
  * Description: An in console dungeon crawler!
+ * potentially no longer in console.
  */
 
 #include <iostream>
@@ -77,6 +78,7 @@ void render() {
     }
 }
 
+/*
 int main() {
     using Clock = std::chrono::steady_clock;
     using Duration = std::chrono::duration<double>;
@@ -104,5 +106,19 @@ int main() {
         render();
     }
 
+    return 0;
+}
+*/
+
+#include "libtcod.hpp"
+int main() {
+    TCODConsole::initRoot(80,50,"libtcod C++ tutorial",false);
+    while ( !TCODConsole::isWindowClosed() ) {
+        TCOD_key_t key;
+        TCODSystem::checkForEvent(TCOD_EVENT_KEY_PRESS,&key,NULL);
+        TCODConsole::root->clear();
+        TCODConsole::root->putChar(40,25,'@');
+        TCODConsole::flush();
+    }
     return 0;
 }
