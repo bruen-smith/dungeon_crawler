@@ -7,5 +7,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(libtcod CONFIG REQUIRED)
 
-add_executable(dungeon_crawler main.cpp)
+add_executable(dungeon_crawler main.cpp
+        Actor.hpp
+        Actor.cpp
+        Map.hpp)
 target_link_libraries(dungeon_crawler PRIVATE libtcod::libtcod)

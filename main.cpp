@@ -1,10 +1,9 @@
 /* Project Name: Generic Dungeon Crawler
-* Programmer Name: Bruen Smith
- * Date: 10/26/2026 MM/DD/YYYY
- * Version: 1.2.1
+ * Programmer Name: Bruen Smith
+ * Date: 11/16/2026 MM/DD/YYYY
+ * Version: 1.3.1
  * IDE: CLion 2024.1.4
- * Description: An in console dungeon crawler!
- * potentially no longer in console.
+ * Description: A text based dungeon crawler.
  */
 
 #include <iostream>
@@ -112,12 +111,26 @@ int main() {
 
 #include "libtcod.hpp"
 int main() {
-    TCODConsole::initRoot(80,50,"libtcod C++ tutorial",false);
+    int player_x = 40, player_y = 25;
+    TCODConsole::initRoot(80,50,"Text-Based Crawler",false);
     while ( !TCODConsole::isWindowClosed() ) {
         TCOD_key_t key;
         TCODSystem::checkForEvent(TCOD_EVENT_KEY_PRESS,&key,NULL);
+
+        switch (key.vk) {
+            case TCODK_UP:
+                player_y--; break; // go up
+            case TCODK_DOWN:
+                player_y++; break; // go down
+            case TCODK_LEFT:
+                player_x--; break; // go left
+            case TCODK_RIGHT:
+                player_x++; break; // ok dude you get the idea
+            default:break;
+        }
+
         TCODConsole::root->clear();
-        TCODConsole::root->putChar(40,25,'@');
+        TCODConsole::root->putChar(player_x,player_y,'@');
         TCODConsole::flush();
     }
     return 0;
