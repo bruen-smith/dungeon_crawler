@@ -10,5 +10,7 @@ find_package(libtcod CONFIG REQUIRED)
 add_executable(dungeon_crawler main.cpp
         Actor.hpp
         Actor.cpp
-        Map.hpp)
+        Map.hpp
+        Map.cpp
+        Engine.hpp)
 target_link_libraries(dungeon_crawler PRIVATE libtcod::libtcod)

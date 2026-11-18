@@ -1,7 +1,7 @@
 /* Project Name: Generic Dungeon Crawler
  * Programmer Name: Bruen Smith
- * Date: 11/16/2026 MM/DD/YYYY
- * Version: 1.3.1
+ * Date: 11/18/2026 MM/DD/YYYY
+ * Version: 1.3.2
  * IDE: CLion 2024.1.4
  * Description: A text based dungeon crawler.
  */
