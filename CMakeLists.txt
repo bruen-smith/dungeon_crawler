@@ -12,5 +12,6 @@ add_executable(dungeon_crawler main.cpp
         Actor.cpp
         Map.hpp
         Map.cpp
-        Engine.hpp)
+        Engine.hpp
+        Engine.cpp)
 target_link_libraries(dungeon_crawler PRIVATE libtcod::libtcod)

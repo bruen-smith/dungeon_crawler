@@ -43,7 +43,7 @@ void Map::render() const {
     // scan the map and convert it to a 2d plane and set colors
     // for this we need a nested for loop for the width and height
     // pretty similar to python
-    for (int x=0; x < wodth; x++) {
+    for (int x=0; x < width; x++) {
         for (int y=0; y < height; y++) {
             //finally write some shit to the console
             //still dont understand this the best but its how tcod
